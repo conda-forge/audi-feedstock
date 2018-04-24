@@ -1,4 +1,4 @@
-{% set version = "1.2" %}
+{% set version = "1.2.4" %}
 
 package:
   name: audi
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/darioizzo/audi/archive/v{{ version }}.tar.gz 
-  sha256: efd4bf289836309e8ce6a71dcc0d46f3df0444e276a812cbf2761b0a39fd019d
+  sha256: ccfe601a8cdb66737eeff1cd2b3bc326744eb49293068939c39cd6b85f0fbe68
 
 build:
   number: 0
