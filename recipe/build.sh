@@ -10,6 +10,7 @@ cmake \
     -DAUDI_BUILD_MAIN=no \
     -DAUDI_BUILD_TESTS=yes \
     -DAUDI_BUILD_PYAUDI=no \
+    -DAUDI_WITH_MPPP=yes \
     ..
 
 make

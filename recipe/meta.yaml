@@ -19,6 +19,7 @@ requirements:
     - boost-cpp 1.66.*
     - eigen
     - piranha 0.10
+    - mppp 0.11
 
   run:
     - boost-cpp 1.66.*
