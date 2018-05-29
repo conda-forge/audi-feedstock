@@ -1,4 +1,4 @@
-{% set version = "1.2.4" %}
+{% set version = "1.4" %}
 
 package:
   name: audi
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/darioizzo/audi/archive/v{{ version }}.tar.gz 
-  sha256: ccfe601a8cdb66737eeff1cd2b3bc326744eb49293068939c39cd6b85f0fbe68
+  sha256: 5864f1717a63b3430f0af439c97e9ecca87093fcf53dcd3661286e13047982e3
 
 build:
   number: 0
@@ -16,12 +16,13 @@ requirements:
   build:
     - toolchain
     - cmake
-    - boost-cpp 1.66.*
+    - boost-cpp
     - eigen
-    - piranha 0.10
+    - piranha 0.11
+    - mppp 0.11
 
   run:
-    - boost-cpp 1.66.*
+    - boost-cpp
     - eigen
 
 
