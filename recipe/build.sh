@@ -10,6 +10,7 @@ mkdir build
 cd build
 
 cmake \
+    -DBoost_NO_BOOST_CMAKE=ON \
     -DCMAKE_INSTALL_PREFIX=$PREFIX \
     -DCMAKE_PREFIX_PATH=$PREFIX \
     -DAUDI_BUILD_AUDI=yes \
