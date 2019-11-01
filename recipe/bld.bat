@@ -1,6 +1,10 @@
 mkdir build
 cd build
 
+if [[ "$target_platform" == linux-64 ]]; then
+    LDFLAGS="-lrt ${LDFLAGS}"
+fi
+
 cmake ^
     -G "Ninja" ^
     -DCMAKE_C_COMPILER=clang-cl ^
