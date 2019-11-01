@@ -1,7 +1,7 @@
 mkdir build
 cd build
 
-if [[ "$target_platform" == linux-64 ]]; then
+if [[ "$target_platform" != osx-64 ]]; then
     LDFLAGS="-lrt ${LDFLAGS}"
 fi
 
