@@ -3,6 +3,10 @@
 mkdir build
 cd build
 
+if [[ "$target_platform" == linux-64 ]]; then
+    LDFLAGS="-lrt ${LDFLAGS}"
+fi
+
 cmake \
     -DBoost_NO_BOOST_CMAKE=ON \
     -DCMAKE_INSTALL_PREFIX=$PREFIX \
