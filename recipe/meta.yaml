@@ -10,23 +10,23 @@ source:
 
 build:
   number: 0
-  skip: true  # [win]
+  skip: true  # [win and vc<14]
 
 requirements:
   build:
     - cmake
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    - clang      # [win]
+    - ninja      # [win]
   host:
     - boost-cpp
     - eigen
-    - piranha 0.11
-    - mppp 0.12
+    - obake-devel
+    - mppp
   run:
     - boost-cpp
     - eigen
-    - piranha 0.11
-    - mppp 0.12
 
 test:
   commands:

@@ -1,11 +1,5 @@
 #!/usr/bin/env bash
 
-if [[ "$(uname)" == "Darwin" ]]; then
-    export ENABLE_MPPP=no
-else
-    export ENABLE_MPPP=yes
-fi
-
 mkdir build
 cd build
 
@@ -17,11 +11,10 @@ cmake \
     -DAUDI_BUILD_MAIN=no \
     -DAUDI_BUILD_TESTS=yes \
     -DAUDI_BUILD_PYAUDI=no \
-    -DAUDI_WITH_MPPP=$ENABLE_MPPP \
     ..
 
-make
+make -j${CPU_COUNT} VERBOSE=1
 
-ctest
+ctest --output-on-failure -j${CPU_COUNT}
 
 make install
