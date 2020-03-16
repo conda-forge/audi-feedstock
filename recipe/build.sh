@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 mkdir build
-cd build
+cd build 
 
 if [[ "$target_platform" == linux-64 ]]; then
     LDFLAGS="-lrt ${LDFLAGS}"
