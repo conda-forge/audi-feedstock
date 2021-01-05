@@ -14,7 +14,6 @@ jobs:
       win_64_boost_cpp1.74.0:
         CONFIG: win_64_boost_cpp1.74.0
         UPLOAD_PACKAGES: 'True'
-    maxParallel: 4
   timeoutInMinutes: 360
   variables:
     CONDA_BLD_PATH: D:\\bld\\
