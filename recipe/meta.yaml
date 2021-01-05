@@ -9,7 +9,7 @@ source:
   sha256: a79841855bcb06fd63e1710c6537abc56d8c9105574aafd82b4f566efa19aa9e
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win and vc<14]
 
 requirements:
@@ -25,7 +25,7 @@ requirements:
     - obake-devel
     - mppp
   run:
-    - boost-cpp
+    - {{ pin_compatible('boost-cpp', max_pin='x.x') }}
     - eigen
 
 test:
