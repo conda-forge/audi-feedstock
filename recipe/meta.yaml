@@ -1,4 +1,4 @@
-{% set version = "1.9.1" %}
+{% set version = "1.9.2" %}
 
 package:
   name: audi
@@ -6,17 +6,18 @@ package:
 
 source:
   url: https://github.com/darioizzo/audi/archive/v{{ version }}.tar.gz
-  sha256: a79841855bcb06fd63e1710c6537abc56d8c9105574aafd82b4f566efa19aa9e
+  sha256: 4888205cfc7c8ffe15485b90d151cf6f296fc65c58d3c92ba57da8ab43c17279
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win and vc<14]
 
 requirements:
   build:
-    - cmake
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    - cmake
+    - make       # [unix]
     - clang      # [win]
     - ninja      # [win]
   host:

@@ -3,9 +3,14 @@
 mkdir build
 cd build
 
-if [[ "$target_platform" == linux-64 ]]; then
+if [[ "$target_platform" == osx-* ]]; then
+    # Workarounds for missing C++17 features.
+    export CXXFLAGS="$CXXFLAGS -D_LIBCPP_DISABLE_AVAILABILITY -fno-aligned-allocation"
+else
     LDFLAGS="-lrt ${LDFLAGS}"
 fi
+
+
 
 cmake \
     -DBoost_NO_BOOST_CMAKE=ON \
