@@ -5,7 +5,7 @@ cd build
 
 if [[ "$target_platform" == osx-* ]]; then
     # Workarounds for missing C++17 features.
-    export CXXFLAGS="$CXXFLAGS -DCATCH_CONFIG_NO_CPP17_UNCAUGHT_EXCEPTIONS -fno-aligned-allocation"
+    export CXXFLAGS="$CXXFLAGS -D_LIBCPP_DISABLE_AVAILABILITY -fno-aligned-allocation"
 else
     LDFLAGS="-lrt ${LDFLAGS}"
 fi
