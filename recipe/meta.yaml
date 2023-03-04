@@ -41,6 +41,7 @@ about:
     - COPYING.gpl3
     - COPYING.lgpl3
   summary: 'C++ header only library: Algebra of Taylor truncated polynomials and a few algorithms useful for its applications (e.g. Automated differentiation, Differential Intelligence, Taylor Models, etc.)'
+  dev_url: https://github.com/darioizzo/audi
 
 extra:
   recipe-maintainers:
