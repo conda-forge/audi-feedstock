@@ -35,8 +35,11 @@ test:
 
 about:
   home: http://darioizzo.github.io/audi/
-  license: GPL v3 and LGPL v3
-  license_file: COPYING.lgpl3
+  license: GPL-2.0-only OR GPL-3.0-only OR LGPL-3.0-only
+  license_file:
+    - LICENSE
+    - COPYING.gpl3
+    - COPYING.lgpl3
   summary: 'C++ header only library: Algebra of Taylor truncated polynomials and a few algorithms useful for its applications (e.g. Automated differentiation, Differential Intelligence, Taylor Models, etc.)'
 
 extra:
