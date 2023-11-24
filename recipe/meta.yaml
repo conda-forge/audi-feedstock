@@ -9,7 +9,7 @@ source:
   sha256: 4888205cfc7c8ffe15485b90d151cf6f296fc65c58d3c92ba57da8ab43c17279
 
 build:
-  number: 2
+  number: 3
 
 requirements:
   build:
@@ -20,13 +20,15 @@ requirements:
     - clang      # [win]
     - ninja      # [win]
   host:
-    - boost-cpp
+    - libboost-devel
     - eigen
     - obake-devel
     - mppp
   run:
-    - {{ pin_compatible('boost-cpp', max_pin='x.x') }}
     - eigen
+  run_constrained:
+    # obake uses abseil headers, which require 10.13
+    - __osx >={{ MACOSX_DEPLOYMENT_TARGET }}  # [osx and x86_64]
 
 test:
   commands:
