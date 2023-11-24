@@ -26,6 +26,9 @@ requirements:
     - mppp
   run:
     - eigen
+  run_constrained:
+    # obake uses abseil headers, which require 10.13
+    - __osx >={{ MACOSX_DEPLOYMENT_TARGET }}  # [osx and x86_64]
 
 test:
   commands:
