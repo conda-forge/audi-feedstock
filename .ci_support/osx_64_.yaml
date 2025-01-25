@@ -22,6 +22,10 @@ libboost_devel:
 - '1.86'
 macos_machine:
 - x86_64-apple-darwin13.4.0
+mppp:
+- '2.0'
+obake_devel:
+- '0.9'
 target_platform:
 - osx-64
 zip_keys:

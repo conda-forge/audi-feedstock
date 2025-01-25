@@ -10,5 +10,9 @@ cxx_compiler:
 - vs2019
 libboost_devel:
 - '1.86'
+mppp:
+- '2.0'
+obake_devel:
+- '0.9'
 target_platform:
 - win-64
