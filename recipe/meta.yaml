@@ -1,4 +1,4 @@
-{% set version = "1.9.2" %}
+{% set version = "1.10.0" %}
 
 package:
   name: audi
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://github.com/darioizzo/audi/archive/v{{ version }}.tar.gz
-  sha256: 4888205cfc7c8ffe15485b90d151cf6f296fc65c58d3c92ba57da8ab43c17279
+  sha256: bd74e6040b6de88d4cc2caaa5b621b0ca334e6e657f25e95a77010caf140ca09
 
 build:
-  number: 8
+  number: 0
 
 requirements:
   build:
@@ -38,7 +38,6 @@ about:
   home: http://darioizzo.github.io/audi/
   license: GPL-2.0-only OR GPL-3.0-only OR LGPL-3.0-only
   license_file:
-    - LICENSE
     - COPYING.gpl3
     - COPYING.lgpl3
   summary: 'C++ header only library: Algebra of Taylor truncated polynomials and a few algorithms useful for its applications (e.g. Automated differentiation, Differential Intelligence, Taylor Models, etc.)'
