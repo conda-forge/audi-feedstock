@@ -1,12 +1,15 @@
+if "%CPU_COUNT%"=="" set CPU_COUNT=%NUMBER_OF_PROCESSORS%
+echo Using %CPU_COUNT% cores
+
 mkdir build
 cd build
 
+REM Remove warnings for next version (they're added to codebase)
 cmake ^
-    -G "Ninja" ^
-    -DCMAKE_C_COMPILER=clang-cl ^
-    -DCMAKE_CXX_COMPILER=clang-cl ^
-    -DBoost_NO_BOOST_CMAKE=ON ^
+    -G "Visual Studio 17 2022" ^
+    -A x64 ^
     -DCMAKE_BUILD_TYPE=Release ^
+    -DCMAKE_CXX_FLAGS="/EHsc /wd4244 /wd4018 /wd4456 /wd4530" ^
     -DCMAKE_PREFIX_PATH=%LIBRARY_PREFIX% ^
     -DCMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
     -DAUDI_BUILD_AUDI=yes ^
@@ -15,8 +18,8 @@ cmake ^
     -DAUDI_BUILD_PYAUDI=no ^
     ..
 
-cmake --build . -- -v
+cmake --build .  --config Release -- /m
 
-ctest --output-on-failure -j${CPU_COUNT}
+ctest --output-on-failure -C Release -j%CPU_COUNT%
 
-cmake --build . --target install
+cmake --build . --config Release --target install
