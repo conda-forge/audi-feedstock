@@ -4,7 +4,7 @@ echo Using %CPU_COUNT% cores
 mkdir build
 cd build
 
-REM Remove warnings for next version (they're added to codebase)
+REM Remove extra DCMAKE_CXX_FLAGS flags upon next release (they're now added upstream v1.11)
 cmake ^
     -G "Visual Studio 17 2022" ^
     -A x64 ^
