@@ -22,6 +22,11 @@ requirements:
     - ninja      # [win]
   host:
     - libboost-devel
+    - libboost-serialization
+    - libboost-timer
+    - libboost-chrono
+    - libboost-system
+    - libboost-unit-test-framework
     - eigen
     - obake-devel
     - mppp
