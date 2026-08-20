@@ -7,6 +7,8 @@ package:
 source:
   url: https://github.com/darioizzo/audi/archive/v{{ version }}.tar.gz
   sha256: a19d25ca3cd0d0f0e6de7e51a6b67dc77a4a514e646149777346632b28b2a076
+  patches:
+    - 0001-minimum-eigen-version-enforced.patch
 
 build:
   number: 0
