@@ -1,0 +1,26 @@
+From 02536348639f1c5fcd8729034f6bf58e747f14d5 Mon Sep 17 00:00:00 2001
+From: Dario Izzo <dario.izzo@gmail.com>
+Date: Thu, 20 Aug 2026 13:15:54 +0200
+Subject: [PATCH] minimum eigen version enforced
+
+---
+ CMakeLists.txt | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index fda7823..a535809 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -172,7 +172,9 @@ if(AUDI_BUILD_AUDI)
+     # audi dependencies.
+ 
+     # Eigen setup (modern CONFIG mode, providing the Eigen3::Eigen imported target).
+-    find_package(Eigen3 3.4 REQUIRED CONFIG)
++    # Use a version range so that 3.4 is treated as the *minimum* required version
++    # (any 3.4 or newer release is accepted), rather than an exact match.
++    find_package(Eigen3 3.4...<100 REQUIRED CONFIG)
+     message(STATUS "Eigen version detected: ${Eigen3_VERSION}")
+     
+     # obake setup.
+-- 
+2.50.1 (Apple Git-155)
