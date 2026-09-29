@@ -1,4 +1,4 @@
-{% set version = "1.10.2" %}
+{% set version = "1.10.3" %}
 
 package:
   name: audi
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://github.com/darioizzo/audi/archive/v{{ version }}.tar.gz
-  sha256: a19d25ca3cd0d0f0e6de7e51a6b67dc77a4a514e646149777346632b28b2a076
+  sha256: fca0c9793241f9da8ae1c2d1f93b017152019540e508a60839406c0e49a8d46e
   patches:
     - 0001-minimum-eigen-version-enforced.patch
 
 build:
-  number: 1
+  number: 0
 
 requirements:
   build:
